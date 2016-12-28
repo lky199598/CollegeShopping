@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<!-- 通常，一个session-factory节点代表一个数据库 -->
+	<session-factory>
+		<property name="connection.username">root</property>
+		<property name="connection.password"></property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql:///Structs2HibernateStudent?useUnicode=true&amp;characterEncoding=UTF-8</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+	     
+	    <mapping resource="entity/Students.cfg.xml"/>
+	    <mapping resource="entity/Users.cfg.xml"/>
+	</session-factory>
+</hibernate-configuration>
+

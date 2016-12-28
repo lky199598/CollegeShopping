@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class name="entity.Students" table="Students">
+
+		<id name="sid" type="java.lang.String" column="sid" length="8">
+			<!-- class="assigned"说明主键是自己定的，不是数据库生成的 -->
+			<generator class="assigned"></generator>
+		</id>
+
+		<property name="sname" type="java.lang.String"></property>
+		<property name="gender" type="java.lang.String"></property>
+	<!-- 	Date对应的是你用的数据库的date类型 只包含年月日
+        java.util.Date对应Java的date类型 包括所有的年月日时分秒 -->
+		<property name="birthday" type="date"></property>
+		<property name="address" type="java.lang.String"></property>
+
+	</class>
+
+</hibernate-mapping>
+
+

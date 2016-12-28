@@ -1,0 +1,87 @@
+<html>
+<head>
+
+<script type="text/javascript">
+function showdiv(name){
+document.getElementById('div').style.display=(document.getElementById('div').style.display=='none')?'':'none';
+document.getElementById('divusername').value=name;
+}
+</script>
+
+</head>
+
+<body>
+<table border="1">
+<caption>学生信息表</caption>
+<tr>
+<th>姓名</th>
+<th>班级</th>
+<th>年龄</th>
+<th>学号</th>
+<th colspan = "2">操作</th>
+</tr>
+
+
+<tr>
+<th id="username">张三</th>
+<td>5.0</td>
+<td>3.5</td>
+<td>1.5</td>
+<td><button type="button">删除</button></td>
+<td><button type="button" onclick="showdiv('张三')" >编辑</button></td>
+</tr>
+
+<tr>
+<th>李四</th>
+<td>6.0</td>
+<td>3.0</td>
+<td>1.0</td>
+<td><button type="button">删除</button></td>
+<td><button type="button" onclick="showdiv('李四')" >编辑</button></td>
+</tr>
+
+<tr>
+<th>王五</th>
+<td>6.5</td>
+<td>2.5</td>
+<td>1.0</td>
+<td><button type="button">删除</button></td>
+<td><button type="button" onclick="showdiv('王五')" >编辑</button></td>
+</tr>
+<tr>
+<th>赵六</th>
+<td>7.0</td>
+<td>2.0</td>
+<td>1.0</td>
+<td><button type="button">删除</button></td>
+<td><button type="button" onclick="showdiv('赵六')" >编辑</button></td>
+</tr>
+</table>
+
+
+<div id="div" style="display:none">
+<table border="1">
+<tr>
+<th>姓名</th>
+<th>班级</th>
+<th>年龄</th>
+<th>学号</th>
+<th colspan = "2">操作</th>
+</tr>
+
+
+<tr>
+<form action=".../edit.jsp method="get">
+<td><input id="divusername" type="text" name = "username"/></td>
+<td><input type="text" name = "classname"/></td>
+<td><input type="text" name = "age"/></td>
+<td><input type="text" name = "studentnum"/></td>
+<td><input type="submit" value="提交"></td>
+</form>
+</tr>
+
+</table>
+</div>
+
+</body>
+</html>

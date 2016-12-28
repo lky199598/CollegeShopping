@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class name="entity.Users" table="Users">
+
+		<id name="uid" type="int">
+		<!-- 根据不同的底层数据库采用不同的主键生成方式 -->
+			<generator class="native"></generator>
+		</id>
+
+		<property name="username" type="java.lang.String"></property>
+		<property name="password" type="java.lang.String"></property>
+	</class>
+	
+</hibernate-mapping>
+
+
